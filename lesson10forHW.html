@@ -1,13 +1,13 @@
 <meta charset="utf-8">
 <script>
 
-ammount = parseInt (prompt  ('Введите сумму вклада'));
-interestRate = parseInt (prompt ('Введите процентную ставку'));
-yearDuration = parseInt (prompt ('Введите длительность вклада'));
+ammount = parseInt (prompt  ('Введите сумму вклада')); // вводим переменную сколько сейчас денег на счете
+interestRate = parseInt (prompt ('Введите процентную ставку')); // вводм проценности ставки
+yearDuration = parseInt (prompt ('Введите длительность вклада')); // вводим длительность вклада
 
-for (var year=1; year<=yearDuration; year++) { 
-	ammount =ammount+ammount*interestRate/100;
-	alert ('Прошло лет:' + year + 'Сумма на счёте' + ammount);
+for (var year=1; year<=yearDuration; year++) {  // начинаем с 1 года, проверяем чтобы год был меньше длительности вклада, добавляем год в каждом цикле
+	ammount =ammount+ammount*interestRate/100; //увеличиваем значение денег на размер процентной ставки
+	alert ('Прошло лет: ' + year + '. Сумма на счёте: ' + ammount); // выводим сообщение о текущем годе и количестве денег на счете
 }
 
 </script>
