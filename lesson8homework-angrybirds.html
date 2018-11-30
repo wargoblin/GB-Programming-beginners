@@ -1,0 +1,13 @@
+<meta charset="utf-8">
+<script>
+
+	var shotAngle = parseInt(prompt ('введи угол выстрела'));
+
+	if (shotAngle>90 || shotAngle<0){
+		alert ('вообще не туда');
+	} else if (shotAngle>=13 && shotAngle<=20 || shotAngle>=80 && shotAngle<=88) {
+		alert ('попал!');
+	} else {
+		alert ('мимо');
+	}
+</script>
