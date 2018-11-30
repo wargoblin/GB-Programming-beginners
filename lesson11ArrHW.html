@@ -1,23 +1,27 @@
 <meta charset="utf-8">
 <script>
 
-var arr = [];
-var rounds = 100;
-var zeros = 0;
+var arr = []; // создаем массив данных
+var rounds = 100; // задаем количество раундов
+var ping = 0; // создаем переменную выпавшего числа от 0 до 36 (всего 37). принимаем что 0 - зеро, четные числа - красные, нечетные - черные
+var maxRed = 0;
 var i = 0;
 
-for (i=0; i<=rounds; i++) {
-	arr.push(Math.round(Math.random()*36));
+for (i=0; i<=rounds; i++) { //формируем массив выпавших данных -1 это черные, +1 красные, 0 - зеро
+	ping = (Math.round(Math.random()*36)); //feature: сделать более рандомное число
+	if (ping == 0) { arr.push(0); 
+	} else if (ping%2 == 0) {arr.push(1) //проверяем четность. истинно если остаток от деления на два равен 0
+	} else { arr.push(-1)
+	}
 }
-
 alert (arr);
-
+/*
 for (i=0; i<arr.length; i++) {
-	if (arr[i] == 0) {
+	if (arr[i] == 0 || zeros) { //тут надо передать счетчик красных
 		zeros++
 	}
 }
 
-alert ('Частота выпадения зеро: ' + zeros/arr.length*100 + '%');
-
+alert ('Максимальное количество раз красное выпало: ' + maxRed + 'раз');
+*/
 </script>
