@@ -1,13 +1,13 @@
 <meta charset="utf-8">
 <script>
 
-ammountStart = prompt  ('Введите сумму вклада');
-percent = prompt ('Введите процентную ставку');
-yearDuration = prompt ('Введите длительность вклада');
+ammount = parseInt (prompt  ('Введите сумму вклада'));
+interestRate = parseInt (prompt ('Введите процентную ставку'));
+yearDuration = parseInt (prompt ('Введите длительность вклада'));
 
 for (var year=1; year<=yearDuration; year++) { 
-	ammountNow =ammountStart*((1+percent/100)^year)
-	alert (ammountNow);
+	ammount =ammount+ammount*interestRate/100;
+	alert ('Прошло лет:' + year + 'Сумма на счёте' + ammount);
 }
 
 </script>
