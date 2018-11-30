@@ -1,8 +1,13 @@
 <meta charset="utf-8">
 <script>
 
-for (var n=0; n<=10; n++) { //var=0 - любое выражение, которое делается в начале перед запуском цикла; n<=10 условие продолжения цикла, n++ действие в конце цикла
-	alert (n);
+ammountStart = prompt  ('Введите сумму вклада');
+percent = prompt ('Введите процентную ставку');
+yearDuration = prompt ('Введите длительность вклада');
+
+for (var year=1; year<=yearDuration; year++) { 
+	ammountNow =ammountStart*((1+percent/100)^year)
+	alert (ammountNow);
 }
 
 </script>
